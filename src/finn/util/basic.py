@@ -174,7 +174,7 @@ def get_by_name(container, name, name_field="name"):
 
     inds = [i for i, e in enumerate(names) if e == name]
     if len(inds) > 1:
-        raise Exception("Found multiple get_by_name matches, undefined behavior")
+        raise Exception(f"Found multiple get_by_name matches, undefined behavior. {names[inds[0]]=}")
     elif len(inds) == 0:
         return None
     else:
